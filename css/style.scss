@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        background-color: #cccccc;
+        padding: 1em 1em 0.5em 0;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        // overflow-y: hidden;
+
+        #cont-panel {
+            height: 90vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            margin: 1em;
+
+            #cust-img {
+                display: none;
+            }
+
+            img {
+                width: 3em;
+                cursor: pointer;
+
+                &:active {
+                    filter: invert(86%) sepia(5%) saturate(4%) hue-rotate(315deg) brightness(100%) contrast(83%);
+                }
+
+                &:hover {
+                    filter: invert(86%) sepia(93%) saturate(2534%) hue-rotate(218deg) brightness(103%) contrast(102%);
+                }
+            }
+        }
+
+        #full-document {
+            box-shadow: 0 0 0.5em black;
+            background-color: white;
+            width: 100%;
+
+            #logo-cont {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 1em;
+
+                #logo {
+                    width: 15em;
+                }
+            }
+
+            #invoice-cont {
+                margin-left: 2em;
+                font-weight: bold;
+
+                span {
+                    font-weight: normal;
+                }
+
+                .cust-data[contentEditable="true"]:empty:not(:focus):before {
+                    content: attr(placeholder)
+                }
+            }
+
+            #container {
+                display: flex;
+                justify-content: center;
+                margin-top: 1em;
+
+                table {
+                    width: 80%;
+                    border: 2px solid black;
+
+                    th {
+                        border-bottom: 1px solid black;
+                        width: 50%;
+                    }
+
+                    td,
+                    option,
+                    select {
+                        text-align: center;
+                    }
+
+                    .desc-list {
+                        width: 100%;
+                    }
+
+                    .srvcPrice,
+                    input {
+                        width: 7ch;
+                        align-items: center;
+                        border: 0;
+                    }
+                }
+            }
+
+            #total-cont {
+                display: flex;
+                justify-content: flex-end;
+                font-weight: bold;
+                margin: 1em 2em;
+            }
+
+            #img-cont {
+                justify-content: center;
+                width: 100%;
+                padding: 0 3em;
+                margin-bottom: 1em;
+
+                img {
+                    width: 60%;
+                    height: 60%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    body,
+    select,
+    option {
+        font-size: 0.66rem;
+    }
+
+    #cont-panel {
+        img {
+            width: 2em;
+        }
+    }
+
+    #full-document {
+        #logo-cont {
+            justify-content: center;
+
+            #logo {
+                width: 20em;
+            }
+        }
+    }
+
+    #img-cont {
+        #logo {
+            width: 50%;
+            height: 50%;
+        }
+    }
+}

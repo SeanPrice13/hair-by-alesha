@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  background-color: #cccccc;
+  padding: 1em 1em 0.5em 0;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+* body #cont-panel {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1em;
+}
+
+* body #cont-panel #cust-img {
+  display: none;
+}
+
+* body #cont-panel img {
+  width: 3em;
+  cursor: pointer;
+}
+
+* body #cont-panel img:active {
+  -webkit-filter: invert(86%) sepia(5%) saturate(4%) hue-rotate(315deg) brightness(100%) contrast(83%);
+          filter: invert(86%) sepia(5%) saturate(4%) hue-rotate(315deg) brightness(100%) contrast(83%);
+}
+
+* body #cont-panel img:hover {
+  -webkit-filter: invert(86%) sepia(93%) saturate(2534%) hue-rotate(218deg) brightness(103%) contrast(102%);
+          filter: invert(86%) sepia(93%) saturate(2534%) hue-rotate(218deg) brightness(103%) contrast(102%);
+}
+
+* body #full-document {
+  -webkit-box-shadow: 0 0 0.5em black;
+          box-shadow: 0 0 0.5em black;
+  background-color: white;
+  width: 100%;
+}
+
+* body #full-document #logo-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 1em;
+}
+
+* body #full-document #logo-cont #logo {
+  width: 15em;
+}
+
+* body #full-document #invoice-cont {
+  margin-left: 2em;
+  font-weight: bold;
+}
+
+* body #full-document #invoice-cont span {
+  font-weight: normal;
+}
+
+* body #full-document #invoice-cont .cust-data[contentEditable="true"]:empty:not(:focus):before {
+  content: attr(placeholder);
+}
+
+* body #full-document #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+}
+
+* body #full-document #container table {
+  width: 80%;
+  border: 2px solid black;
+}
+
+* body #full-document #container table th {
+  border-bottom: 1px solid black;
+  width: 50%;
+}
+
+* body #full-document #container table td,
+* body #full-document #container table option,
+* body #full-document #container table select {
+  text-align: center;
+}
+
+* body #full-document #container table .desc-list {
+  width: 100%;
+}
+
+* body #full-document #container table .srvcPrice,
+* body #full-document #container table input {
+  width: 7ch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+}
+
+* body #full-document #total-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: bold;
+  margin: 1em 2em;
+}
+
+* body #full-document #img-cont {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0 3em;
+  margin-bottom: 1em;
+}
+
+* body #full-document #img-cont img {
+  width: 60%;
+  height: 60%;
+}
+
+@media only screen and (max-width: 450px) {
+  body,
+  select,
+  option {
+    font-size: 0.66rem;
+  }
+  #cont-panel img {
+    width: 2em;
+  }
+  #full-document #logo-cont {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #full-document #logo-cont #logo {
+    width: 20em;
+  }
+  #img-cont #logo {
+    width: 50%;
+    height: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

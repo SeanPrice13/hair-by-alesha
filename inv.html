@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Hair by Alesha</title>
+</head>
+<body>
+    <div id="cont-panel">
+        <img src="./assets/plus.svg" alt="Add Item" id="add-item">
+        <label for="cust-img"><img src="./assets/image.svg" alt="Add Image"></label>
+        <img src="./assets/save.svg" alt="Save Invoice" id="save-inv">
+        <img src="./assets/redo-alt-solid.svg" alt="Refresh" id="redo">
+        <input type="file" accept="image/*" name="Add Image" id="cust-img">
+    </div>
+
+    <div id="full-document">
+        <div id="logo-cont"><img src="./assets/logo.png" alt="YourLogo" id="logo"></div>
+        <div id="invoice-cont">
+            <p>Invoice No: <span id="inv-no"></span></p>
+            <p id="date">Date: <span></span></p>
+            <p id="name">Name: <span contenteditable="true" class="cust-data" placeholder="Edit Name"></span></p>
+            <p id="email">Email: <span contenteditable="true" class="cust-data" placeholder="Edit Email"></span></p>
+            <p id="phone">Phone: <span contenteditable="true" class="cust-data" placeholder="Edit Phone"></span></p>
+        </div>
+
+        <div id="container">
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="total-cont">
+            <p>Total: CAD $<span id="grand-total">0.00</span></p>
+        </div>
+
+        <div id="img-cont"></div>
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script src="./libs/html2pdf.bundle.min.js"></script>
+</body>
+</html>
